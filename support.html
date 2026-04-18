@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サポート - 中学受験漢字ドリル</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background: #2e7d32;
+      color: white;
+      padding: 32px 20px 24px;
+      text-align: center;
+    }
+    header h1 { font-size: 22px; font-weight: bold; }
+    header p { font-size: 14px; margin-top: 6px; opacity: 0.85; }
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    .card h2 {
+      font-size: 17px;
+      color: #2e7d32;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e8f5e9;
+    }
+    .faq-item { margin-bottom: 18px; }
+    .faq-item:last-child { margin-bottom: 0; }
+    .faq-q {
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+    .faq-q::before { content: 'Q. '; color: #2e7d32; }
+    .faq-a {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #555;
+      padding-left: 20px;
+    }
+    .faq-a::before { content: 'A. '; font-weight: bold; color: #555; margin-left: -20px; }
+    .links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+    .link-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .link-btn.primary { background: #2e7d32; color: white; }
+    .link-btn.secondary { background: #e8f5e9; color: #2e7d32; }
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #aaa;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>中学受験漢字ドリル</h1>
+    <p>サポートページ</p>
+  </header>
+
+  <main>
+    <!-- よくある質問 -->
+    <div class="card">
+      <h2>よくある質問</h2>
+
+      <div class="faq-item">
+        <p class="faq-q">プレミアム版を購入したのに広告が消えません</p>
+        <p class="faq-a">アプリを一度完全に終了して再起動してください。それでも解決しない場合は、画面下部の「購入を復元」をお試しください。</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">機種変更後にプレミアム版が使えなくなりました</p>
+        <p class="faq-a">同じApple IDでサインインした状態で、購入画面の「購入を復元」をタップしてください。再購入不要で復元できます。</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">学習データ（進捗・不正解リスト）が消えてしまいました</p>
+        <p class="faq-a">学習データは端末内に保存されており、アプリを削除すると消えてしまいます。現在のバージョンではクラウドへのバックアップには対応しておりません。</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">音声が読み上げられません</p>
+        <p class="faq-a">端末の音量とサイレントモードをご確認ください。また、設定アプリ →「アクセシビリティ」→「読み上げコンテンツ」から日本語音声がインストールされているかご確認ください。</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">返金を希望しています</p>
+        <p class="faq-a">App内課金の返金はAppleが窓口となります。<a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a> からお手続きください。</p>
+      </div>
+    </div>
+
+    <!-- ドキュメント -->
+    <div class="card">
+      <h2>規約・ポリシー</h2>
+      <div class="links">
+        <a class="link-btn primary" href="privacy.html">プライバシーポリシー</a>
+        <a class="link-btn secondary" href="terms.html">利用規約</a>
+      </div>
+    </div>
+
+    <!-- お問い合わせ -->
+    <div class="card">
+      <h2>上記で解決しない場合</h2>
+      <p style="font-size:14px; line-height:1.7; color:#555;">
+        App Store のアプリページ下部にある「開発者に連絡」からお問い合わせください。
+        できる限り迅速にご対応いたします。
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 中学受験漢字ドリル
+  </footer>
+</body>
+</html>
