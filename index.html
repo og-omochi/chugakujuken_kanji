@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>サポート - 中学受験漢字ドリル</title>
+  <title>中学受験漢字ドリル</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -12,48 +12,151 @@
       color: #333;
     }
     header {
-      background: #2e7d32;
+      background: linear-gradient(135deg, #1565C0, #0D47A1);
       color: white;
-      padding: 32px 20px 24px;
+      padding: 48px 20px 40px;
       text-align: center;
     }
-    header h1 { font-size: 22px; font-weight: bold; }
-    header p { font-size: 14px; margin-top: 6px; opacity: 0.85; }
+    .app-icon {
+      width: 96px;
+      height: 96px;
+      background: white;
+      border-radius: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      font-size: 26px;
+      font-weight: bold;
+      line-height: 1.3;
+    }
+    header p {
+      font-size: 15px;
+      margin-top: 8px;
+      opacity: 0.85;
+      line-height: 1.6;
+    }
+    .store-btn {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 12px 28px;
+      background: white;
+      color: #1565C0;
+      border-radius: 28px;
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
     main {
       max-width: 680px;
       margin: 0 auto;
       padding: 32px 20px 60px;
     }
-    .card {
+    .section-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #1565C0;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #E3F2FD;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .feature-card {
       background: white;
-      border-radius: 12px;
+      border-radius: 14px;
+      padding: 20px 16px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .feature-icon {
+      font-size: 36px;
+      margin-bottom: 8px;
+    }
+    .feature-card h3 {
+      font-size: 14px;
+      font-weight: bold;
+      color: #1565C0;
+      margin-bottom: 6px;
+    }
+    .feature-card p {
+      font-size: 12px;
+      color: #666;
+      line-height: 1.5;
+    }
+    .grade-section {
+      background: white;
+      border-radius: 14px;
       padding: 24px;
       margin-bottom: 20px;
       box-shadow: 0 1px 4px rgba(0,0,0,0.08);
     }
-    .card h2 {
-      font-size: 17px;
-      color: #2e7d32;
-      margin-bottom: 14px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid #e8f5e9;
+    .grade-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
     }
-    .faq-item { margin-bottom: 18px; }
-    .faq-item:last-child { margin-bottom: 0; }
-    .faq-q {
-      font-size: 15px;
-      font-weight: bold;
-      margin-bottom: 6px;
-    }
-    .faq-q::before { content: 'Q. '; color: #2e7d32; }
-    .faq-a {
+    .grade-badge {
+      padding: 8px 18px;
+      border-radius: 20px;
       font-size: 14px;
-      line-height: 1.7;
-      color: #555;
-      padding-left: 20px;
+      font-weight: bold;
+      color: white;
     }
-    .faq-a::before { content: 'A. '; font-weight: bold; color: #555; margin-left: -20px; }
-    .links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+    .premium-section {
+      background: linear-gradient(135deg, #F9A825, #E65100);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 20px;
+      color: white;
+    }
+    .premium-section h2 {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+    .premium-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .premium-section li {
+      font-size: 14px;
+      padding: 4px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+    .premium-section li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+    .premium-price {
+      margin-top: 14px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .links-section {
+      background: white;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    .link-list {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
     .link-btn {
       display: inline-block;
       padding: 10px 20px;
@@ -62,69 +165,87 @@
       text-decoration: none;
       font-weight: bold;
     }
-    .link-btn.primary { background: #2e7d32; color: white; }
-    .link-btn.secondary { background: #e8f5e9; color: #2e7d32; }
+    .link-btn.primary { background: #1565C0; color: white; }
+    .link-btn.secondary { background: #E3F2FD; color: #1565C0; }
     footer {
       text-align: center;
       font-size: 12px;
       color: #aaa;
-      padding: 20px;
+      padding: 24px 20px;
+    }
+    @media (max-width: 480px) {
+      .features { grid-template-columns: 1fr 1fr; }
+      header h1 { font-size: 22px; }
     }
   </style>
 </head>
 <body>
   <header>
+    <div class="app-icon">📖</div>
     <h1>中学受験漢字ドリル</h1>
-    <p>サポートページ</p>
+    <p>小学1〜6年生・難関レベルの漢字を<br>読み・書き・テストで効率よく学習</p>
+    <a class="store-btn" href="https://apps.apple.com/jp/app/id6744494718" target="_blank">App Store でダウンロード</a>
   </header>
 
   <main>
-    <!-- よくある質問 -->
-    <div class="card">
-      <h2>よくある質問</h2>
-
-      <div class="faq-item">
-        <p class="faq-q">プレミアム版を購入したのに広告が消えません</p>
-        <p class="faq-a">アプリを一度完全に終了して再起動してください。それでも解決しない場合は、画面下部の「購入を復元」をお試しください。</p>
+    <!-- 機能紹介 -->
+    <h2 class="section-title" style="margin-top:0;">アプリの特徴</h2>
+    <div class="features">
+      <div class="feature-card">
+        <div class="feature-icon">🔊</div>
+        <h3>読み練習</h3>
+        <p>カタカナを選んで読み方を組み立てる、楽しいクイズ形式</p>
       </div>
-
-      <div class="faq-item">
-        <p class="faq-q">機種変更後にプレミアム版が使えなくなりました</p>
-        <p class="faq-a">同じApple IDでサインインした状態で、購入画面の「購入を復元」をタップしてください。再購入不要で復元できます。</p>
+      <div class="feature-card">
+        <div class="feature-icon">✏️</div>
+        <h3>書き練習</h3>
+        <p>読み仮名のヒントから、正しい漢字を選んで学習</p>
       </div>
-
-      <div class="faq-item">
-        <p class="faq-q">学習データ（進捗・不正解リスト）が消えてしまいました</p>
-        <p class="faq-a">学習データは端末内に保存されており、アプリを削除すると消えてしまいます。現在のバージョンではクラウドへのバックアップには対応しておりません。</p>
+      <div class="feature-card">
+        <div class="feature-icon">📝</div>
+        <h3>テストモード</h3>
+        <p>10問ランダム出題。結果をグラフで確認できます</p>
       </div>
-
-      <div class="faq-item">
-        <p class="faq-q">音声が読み上げられません</p>
-        <p class="faq-a">端末の音量とサイレントモードをご確認ください。また、設定アプリ →「アクセシビリティ」→「読み上げコンテンツ」から日本語音声がインストールされているかご確認ください。</p>
-      </div>
-
-      <div class="faq-item">
-        <p class="faq-q">返金を希望しています</p>
-        <p class="faq-a">App内課金の返金はAppleが窓口となります。<a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a> からお手続きください。</p>
+      <div class="feature-card">
+        <div class="feature-icon">🚩</div>
+        <h3>フラグ・不正解管理</h3>
+        <p>苦手な漢字をフラグや不正解リストで重点的に復習</p>
       </div>
     </div>
 
-    <!-- ドキュメント -->
-    <div class="card">
-      <h2>規約・ポリシー</h2>
-      <div class="links">
-        <a class="link-btn primary" href="privacy.html">プライバシーポリシー</a>
+    <!-- 対象学年 -->
+    <div class="grade-section">
+      <h2 class="section-title" style="margin-bottom:0;">対象レベル</h2>
+      <div class="grade-list">
+        <span class="grade-badge" style="background:#4CAF50;">1年生</span>
+        <span class="grade-badge" style="background:#2196F3;">2年生</span>
+        <span class="grade-badge" style="background:#FF9800;">3年生</span>
+        <span class="grade-badge" style="background:#9C27B0;">4年生</span>
+        <span class="grade-badge" style="background:#F44336;">5年生</span>
+        <span class="grade-badge" style="background:#795548;">6年生</span>
+        <span class="grade-badge" style="background:#37474F;">難関レベル</span>
+      </div>
+    </div>
+
+    <!-- プレミアム -->
+    <div class="premium-section">
+      <h2>⭐ プレミアム版 ¥400（買い切り）</h2>
+      <ul>
+        <li>広告を完全に非表示</li>
+        <li>各学年の問題が約7割増し</li>
+        <li>不正解テストで弱点を集中攻略</li>
+      </ul>
+      <p class="premium-price">¥400 買い切り</p>
+    </div>
+
+    <!-- リンク -->
+    <div class="links-section">
+      <h2 class="section-title" style="margin-bottom:0;">関連リンク</h2>
+      <div class="link-list">
+        <a class="link-btn primary" href="support.html">サポート・よくある質問</a>
+        <a class="link-btn secondary" href="privacy.html">プライバシーポリシー</a>
         <a class="link-btn secondary" href="terms.html">利用規約</a>
       </div>
-    </div>
-
-    <!-- お問い合わせ -->
-    <div class="card">
-      <h2>上記で解決しない場合</h2>
-      <p style="font-size:14px; line-height:1.7; color:#555;">
-        App Store のアプリページ下部にある「開発者に連絡」からお問い合わせください。
-        できる限り迅速にご対応いたします。
-      </p>
     </div>
   </main>
 
